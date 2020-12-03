@@ -8,8 +8,8 @@ f.close()
 def part1(file):
     trees = 0
     x = 3
-    for y in range(1, len(lines) - 1):
-        line = lines[y] * 100
+    for y in range(1, len(file) - 1):
+        line = file[y] * 100
         if line[x] == '#':
             trees += 1
         x += 3
@@ -22,8 +22,8 @@ def part2(file):
     for slope in slopes:
         trees = 0
         x = slope[0]
-        for y in range(slope[1], len(lines) - 1, slope[1]):
-            line = lines[y] * 100
+        for y in range(slope[1], len(file) - 1, slope[1]):
+            line = file[y] * 100
             if line[x] == '#':
                 trees += 1
             x += slope[0]
